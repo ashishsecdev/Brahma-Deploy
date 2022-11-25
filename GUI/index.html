@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+ <body style="background-color:green;text-align:center">
+<h1>Cloud Environment</h1>
+
+<p>Connect CSP with Terraform</p>
+<form action="/action_page.php">
+  <label for="CSP">Select Cloud Provider:</label>
+  <select name="CSP" id="CSP">
+    <option value="AWS">AWS</option>
+    <option value="GCP">GCP</option>
+    <option value="Azure">Azure</option>
+    <option value="Ali">Ali</option>
+  </select>
+  <br>
+  <!--<input type="submit" value="Submit">-->
+</form>
+<br><br>
+<p><b>Number of Ansible Nodes</b></p>
+
+<form action="/action_page.php">
+  <label for="Numbern">How many Ansible Nodes?:</label>
+  <select name="Ansn" id="Ansn">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+  <br><br>
+  <!--<input type="submit" value="Submit">-->
+</form><br>
+
+<p><b>Provide CSP Service Account Key</b></p>
+
+<form action="/tfexec.php">
+  <label for="myfile">CSP Account Key</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+<br>
+	<input type="submit">
+
+ 
+</form>
+<br>
+
+<p> <b>Deploy Ansible Cluster </b></p>
+<form action="ansible_cluster_deploy.php">
+    <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: Red; background-color: #4d14de; border: 3pt ridge lightgrey"  value="Yes!">
+</form>
+<br><br>
+<!--<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" />-->
+<img src="automation.gif" width="250"/> 
+
+</body>
+</html>
