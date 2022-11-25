@@ -53,6 +53,10 @@ Cloud Service Provider
 
 ![Brahma Deploy Architecture](https://github.com/ashishsecdev/Brahma-Deploy/blob/main/Brahma-Deploy_logo.png)
 
+## Demo Video
+
+https://user-images.githubusercontent.com/49029528/204016266-072d9046-7777-4302-826b-cec5c468c2bc.mp4
+
 # Project Contribution
 
 - Please create a new branch and raise PR.
