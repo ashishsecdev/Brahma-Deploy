@@ -1,6 +1,10 @@
 /*variable "instance_type" {
   type=string
 }Ask for user input (see if you want to play with it)
+  
+variable "number_of_nodes" {
+  type = number
+}
 */
 variable "master_instance" {
   type=string
