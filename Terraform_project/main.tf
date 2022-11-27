@@ -68,3 +68,23 @@ resource "google_compute_instance" "node2" {
   }
   metadata_startup_script = file("${path.module}/Ansible_node.sh")
 }
+
+
+/*resource "google_compute_instance" "node" {
+  count = var.number_of_nodes
+  name = "ansible-node${count.index}"
+  machine_type = var.node_instance
+  tags = [
+    "ansible",
+    "node${count.index}"]
+  boot_disk {
+    initialize_params {
+      image = var.image
+    }
+  }
+  network_interface {
+    network = "default"
+    access_config {
+    }
+  }
+}*/
