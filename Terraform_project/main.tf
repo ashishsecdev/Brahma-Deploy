@@ -87,4 +87,5 @@ resource "google_compute_instance" "node2" {
     access_config {
     }
   }
+  metadata_startup_script = file("${path.module}/Ansible_node.sh")
 }*/
