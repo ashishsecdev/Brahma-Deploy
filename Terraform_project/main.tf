@@ -2,7 +2,7 @@ data "template_file" "script_file" {
   template = file("Ansible_Master.sh")
   vars = {
     # Combining eips and seperating them on the script
-    eips = join(",", google_compute_instance.node.*.network_interface.0.access_config.0.nat_ip)
+    eipslist = join(",", google_compute_instance.node.*.network_interface.0.access_config.0.nat_ip)
   }
 }
 
