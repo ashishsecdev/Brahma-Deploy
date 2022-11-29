@@ -1,12 +1,8 @@
 # data "template_file" "script_file" {
 #   template = file("Ansible_Master.sh")
-
 #   vars = {
-#     # Combining eips and seperating them on the script
-#     # eip1 = "${google_compute_instance.node[0].network_interface.0.access_config.0.nat_ip}"
-#     # eipslist = "${jsonencode(join("-", google_compute_instance.node.*.network_interface.0.access_config.0.nat_ip))}"
-#     # "${jsonencode(split(",", var.allow_list))}" 
-#     eipslist = ["${google_compute_instance.node.*.network_interface.0.access_config.0.nat_ip}"]
+#     eip1 = google_compute_instance.node1.network_interface.0.access_config.0.nat_ip
+#     eip2 = google_compute_instance.node2.network_interface.0.access_config.0.nat_ip
 #   }
 # }
 

@@ -18,10 +18,11 @@ sudo su admns
 sudo -u admns bash -c "ssh-keygen -f ~admns/.ssh/id_rsa -N ''"
 cd /home/admns/.ssh
 
-sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip1} && sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip1}
+
+sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip1} && sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip2}
 # eipslist1="${join(var.special, google_compute_instance.node.*.network_interface.0.access_config.0.nat_ip)}"
 # read -a eips <<<"$eipslist1"
-# IFS='-' #setting comma as delimiter 
+# IFS='-' #setting - as delimiter 
 # for eip in "${eips[@]}"; #accessing each element of array 
 # do
 #     echo $eip
