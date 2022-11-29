@@ -4,7 +4,8 @@
 # Ask for user input (see if you want to play with it)
 
 variable "number_of_nodes" {
-  type = number
+  type    = number
+  default = 2
 }
 
 variable "master_instance" {
@@ -24,14 +25,15 @@ variable "image" {
 
 # Location of the public key file
 variable "gce_ssh_pub_key_file" {
-  type = string
+  type    = string
+  default = "../test-ssh.pub"
 }
 
 # Username for the intsance user to add ssh key.
 variable "gce_ssh_user" {
-  type = string
+  type    = string
+  default = "ubuntu"
 }
-
 /* You can use this as variable in Provider or resource terraform file.
 variable "Zone" {
   type = string

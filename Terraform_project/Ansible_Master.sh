@@ -18,11 +18,13 @@ sudo su admns
 sudo -u admns bash -c "ssh-keygen -f ~admns/.ssh/id_rsa -N ''"
 cd /home/admns/.ssh
 
-read -a eips <<<"$eipslist"
-IFS=',' #setting comma as delimiter 
-for eip in "${eips[@]}"; #accessing each element of array 
-do
-    echo $eip
-    sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip}
-done 
+sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip1} && sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip1}
+# eipslist1="${join(var.special, google_compute_instance.node.*.network_interface.0.access_config.0.nat_ip)}"
+# read -a eips <<<"$eipslist1"
+# IFS='-' #setting comma as delimiter 
+# for eip in "${eips[@]}"; #accessing each element of array 
+# do
+#     echo $eip
+#     sshpass -p "$account_password" ssh-copy-id -o StrictHostKeyChecking=no ${eip}
+# done 
 # Login to Admns and try ansible all -m ping
