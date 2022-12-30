@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brahma Deploy</title>
+  <style>
+    /* Add some style to the page */
+    body {
+      font-family: arial;
+      text-align: center;
+    }
+    h1 {
+      color: #0070F3;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+    select, input[type="number"] {
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+      margin: 10px;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+    input[type="file"] {
+      width: 200px;
+      margin: 10px;
+      padding: 0;
+      border: none;
+      background: #eee;
+      outline: none;
+    }
+    input[type="submit"] {
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+      margin: 10px;
+      padding: 0;
+      border: none;
+      background: #0070F3;
+      color: white;
+      cursor: pointer;
+      outline: none;
+    }
+    img {
+      height: 50px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body style="background-color:#52D017;text-align:center">
+<br>
+  <h1>Brahma Deploy</h1>
+  <br>
+  <form action="main.tf" method="post">
+    <label for="cloud_provider"><b>Select Cloud Provider</b></label><br>
+    <select id="cloud_provider" name="cloud_provider">
+      <option value="aws">AWS</option>
+      <option value="gcp">GCP</option>
+      <option value="azure">Azure</option>
+      <option value="ali">ALI</option>
+    </select><br>
+    <label for="instance_count"><b>Number of Nodes</b></label><br>
+    <input type="number" id="instance_count" name="instance_count" min="1" max="4"><br>
+    <label for="deployment_file"><b>Account Credential File</b></label><br>
+    <input type="file" id="deployment_file" name="deployment_file"><br>
+    <input type="submit" value="Deploy">
+  </form>
+  <img src="automation.gif" alt="Robot" style="width:200px;height:170px;">
+</body>
+</html>
